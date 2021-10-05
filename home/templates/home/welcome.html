@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    {% load plotly_dash %}
+
+<!--<h1>Home Page</h1>-->
+
+<!--<div class="{% plotly_class name='SimpleExample' %} card" style = "height: 100%; width: 100%">-->
+<!--    {% plotly_app name='SimpleExample' ratio=1 %}-->
+<!--</div>-->
+
+<div class="container" >
+    <div class="row">
+        <script src ="{% static 'main.js'%}"></script>
+        <div class="col-10 mx-auto mt-5"></div>
+            <h2>YM=F prediction in 20 minutes:&nbsp;</h2><h2 id="app">   {{ text }}</h2>
+
+    </div>
+</div>
+<br>
+<div class ="yourBlankSpaceDivClass"></div>
+<div class = "centerImage" style="[B]padding:20px 0;[/B]">
+  <p><img src="https://images.cnbctv18.com/wp-content/uploads/2021/06/trending-stocks-1019x573.jpg"
+                 alt="Italian Trulli" width="500" height="500"></p>
+
+<style type="text/css">
+.centerImage
+{
+ text-align:center;
+ display:block;
+ margin: 0 auto;
+}
+
+.yourBlankSpaceDivClass {
+   padding: 20px 30px; // blank div(or blank space) height and width. Depends on you.
+   position: absolute; // so that you can place the blank div(or blank space) wherever you want it. Make sure you have a "position: relative;" div. Absolute div must be inside a Relative div.
+   top: 0; // Depends on you.
+   left: 0; // Depends on you.
+}
+</style>
+
+</div>
+<br>
+{{ plot1 | safe }}
+
+{% endblock %}
+
