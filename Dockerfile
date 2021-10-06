@@ -14,7 +14,7 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /requirements.txt && \
     adduser --disabled-password --no-create-home app && \
-    pip install psycopg2
+    apt-get install -y redis-server
 
 ENV PATH="/py/bin:$PATH"
 

@@ -85,6 +85,21 @@ DATABASES = {
     }
 }
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND':'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts':[('127.0.0.1', 6379),]
+        }
+    }
+}
+
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': 'localhost:6379',
+    },
+}
 
 # DATABASES = {
 #     'default': {
@@ -133,14 +148,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 ASGI_APPLICATION = 'stock_predictor.routing.application'
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND':'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            'hosts':[('127.0.0.1', 6379),]
-        }
-    }
-}
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
