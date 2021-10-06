@@ -24,6 +24,31 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 
+
+      <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+<!--  &lt;!&ndash; Template Main CSS File &ndash;&gt;-->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+
+
+
+
+
+
 </head>
 
 <body id="page-top">
@@ -45,14 +70,17 @@
             {% include 'partials/_topbar.html' %}
                 <!-- End of Topbar -->
 
+
+
+
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Stock Predictor App</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    <div>
+
+
                     </div>
                 <div class="row">
                     {% block content %}
@@ -118,6 +146,20 @@
     <!-- Page level custom scripts -->
     <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
     <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
+
+      <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
 
 </body>
 

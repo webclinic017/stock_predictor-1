@@ -3,45 +3,92 @@
 {% block content %}
     {% load plotly_dash %}
 
-<!--<h1>Home Page</h1>-->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<!--<div class="{% plotly_class name='SimpleExample' %} card" style = "height: 100%; width: 100%">-->
-<!--    {% plotly_app name='SimpleExample' ratio=1 %}-->
-<!--</div>-->
+  <title>Predict Stocks</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-<div class="container" >
-    <div class="row">
-        <script src ="{% static 'main.js'%}"></script>
-        <div class="col-10 mx-auto mt-5"></div>
-            <h2>YM=F prediction in 20 minutes:&nbsp;</h2><h2 id="app">   {{ text }}</h2>
 
+</head>
+
+<body>
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1>Welcome to the <span>AI Stock Predictor</span></h1>
+      <h2>Predicting next minute prices into the future</h2>
+      <div class="d-flex">
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+
+      </div>
     </div>
-</div>
+  </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <script src ="{% static 'main.js'%}"></script>
+                <p class="description">YM=F price in 20 min:</p>
+                <h4 id="app">{{ text }}</h4>
+
+
+
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+                <p class="description">Current YM=F Price</p>
+              <h4 class="title"><a href="">Comming Soon</a></h4>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <p class="description">Bitcoin Prediction</p>
+              <h4 class="title"><a href="">Comming Soon</a></h4>
+
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+                <p class="description">Current Bitcoin Price</p>
+              <h4 class="title"><a href="">Coming Soon</a></h4>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+        <!-- End Featured Services Section -->
+
+
 <br>
 <div class ="yourBlankSpaceDivClass"></div>
-<div class = "centerImage" style="[B]padding:20px 0;[/B]">
-  <p><img src="https://images.cnbctv18.com/wp-content/uploads/2021/06/trending-stocks-1019x573.jpg"
-                 alt="Italian Trulli" width="500" height="500"></p>
 
-<style type="text/css">
-.centerImage
-{
- text-align:center;
- display:block;
- margin: 0 auto;
-}
 
-.yourBlankSpaceDivClass {
-   padding: 20px 30px; // blank div(or blank space) height and width. Depends on you.
-   position: absolute; // so that you can place the blank div(or blank space) wherever you want it. Make sure you have a "position: relative;" div. Absolute div must be inside a Relative div.
-   top: 0; // Depends on you.
-   left: 0; // Depends on you.
-}
-</style>
+  </main><!-- End #main -->
 
-</div>
-<br>
-{{ plot1 | safe }}
+  </body>
 
 {% endblock %}
 

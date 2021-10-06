@@ -15,7 +15,7 @@ app = DjangoDash('SimpleExample', external_stylesheets=external_stylesheets)
 
 
 app.layout = html.Div([
-    html.H1('Dow Jones Mini Futures Chart'),
+    html.H1('Dow Jones Mini Futures Chart vs Predict Prices'),
     dcc.Graph(id='slider-graph', animate=True, style={"backgroundColor": "#1a2d46", 'color': '#ffffff'}),
     dcc.Slider(
         id='slider-updatemode',

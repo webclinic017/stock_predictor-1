@@ -12,18 +12,23 @@ class GraphConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.accept()
 
-
+        var = [0]
         while True:
-            if int(datetime.datetime.now().minute) % 2 == 0:
+            if int(datetime.datetime.now().minute) % 5 == 0:
                 print(int(datetime.datetime.now().minute), "datetime minute")
 
                 bot = ai_bot("YM=F", "ZNZ21.CBT", "ES=F", "5m", -4, None)
                 bot.create_data()
                 bot.train_model()
                 predict = bot.predict(bot.data_for_prediction)
-                print(predict, 'the_prediction')
-                await self.send(json.dumps({'value': predict[0]}))
+                var = predict
+                print(var, 'the_prediction')
+                await self.send(json.dumps({'value': round(predict[0], 2)}))
                 await sleep(60)
+
+            else:
+                await self.send(json.dumps({'value': round(var[0], 2)}))
+                await sleep(1)
 
 
 
