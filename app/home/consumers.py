@@ -14,7 +14,7 @@ class GraphConsumer(AsyncWebsocketConsumer):
 
         var = [0]
         while True:
-            if int(datetime.datetime.now().minute) % 5 == 0:
+            if int(datetime.datetime.now().minute) % 2 == 0:
                 print(int(datetime.datetime.now().minute), "datetime minute")
 
                 bot = ai_bot("YM=F", "ZNZ21.CBT", "ES=F", "5m", -4, None)
